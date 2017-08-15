@@ -1,0 +1,88 @@
+!!! 5
+%html
+	%head<
+		%meta{:charset => 'utf-8'}<
+		%meta{:name=> "viewport", :content=> "width=device-width, initial-scale=1.0"}<
+		%title<
+			About Me
+		%link{:href=> "css/templateStyling.css", :rel => "stylesheet"}<
+		%link{:href => "css/normalize.css", :rel => "stylesheet"}<
+		%link{:href=> "css/templateStyling.css", :rel => "stylesheet"}<
+		%script{:src => "js/jquery-3.2.1.min.js"}<
+		%script{:src => "js/mainJS.js"}<
+	%body
+		%header<
+			%div.wrapper
+			%div#titlelogo<
+				%a{:href => "index.html"}<
+					%h1#mainheading<
+						Dennis Wong
+			%nav<
+				%button.menu<>
+					MENU
+				%ul.nav-list<>
+					%li.nav-item<>
+						%a.main-nav{:href => "index.html"}<>
+							Portfolio
+					%li.nav-item<>
+						%a.main-nav{:href => "dennis_resume.pdf", :target => "_blank"}<>
+							Resume
+					%li.nav-item<>
+						%a.main-nav.portfolio-On{:href => "about.html"}<>
+							About and Contact
+		%section.mainbody
+			%div.about-wrapper
+				%h1.about-title#about-me<
+					About
+				%hr<
+				%p#about-me-description<
+					I am a 3D modeling artist who has graduated from the School of Interactive Arts and Technology at Simon Fraser University in Vancouver, BC, Canada with a Bachelor of Science. I apply myself in  3D Modelling, Protyping, and UX Design. Along with my main skills I also have a strong programming literacy in Javascript, Java, HTML, CSS, and knowledge of PHP and C#.
+				%hr<
+				%div.about-skills-wrapper<>
+					%div.col-1-of-3.about-skills<
+						%h1.about-title<
+							Focus
+						%p.skills-description<
+							Unity
+							%br<>
+							Maya
+							%br<>
+							Blender
+							%br<>
+							Illustrator
+							%br<>
+							Phototshop
+							%br<>
+							Prototyping
+					%div.col-2-of-3.about-skills<
+						%h1.mabout-title<
+							Capable
+						%p.skills-description<
+							After Effects
+							%br<>
+							HTML
+							%br<>
+							CSS
+							%br<>
+							Javascript
+							%br<>
+							UX Design
+							%br<>
+							C#
+					%div.col-3-of-3.about-skills<
+						%h1.model-title<
+							Knowledgable
+						%p.skills-description<
+							3D Cinema
+							%br<>
+							Java
+							%br<>
+							PHP
+		%footer<
+			%div.footer-left<>
+				%p<>
+					www.dennisptwong.ca
+			%div.footer-right<>
+				%a.social-links{:href => "https://www.linkedin.com/in/dennisptwong/"}<>
+					%img.social-links{:src => "img/linkedin-512.png"}<>
+			%div.wrapper

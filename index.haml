@@ -1,0 +1,74 @@
+!!! 5
+%html
+	%head<
+		%meta{:charset => 'utf-8'}<
+		%meta{:name=> "viewport", :content=> "width=device-width, initial-scale=1.0"}<
+		%title<
+			Dennis Wong's Portfolio
+		%link{:href => "css/normalize.css", :rel => "stylesheet" }<
+		%link{:href=> "css/templateStyling.css", :rel => "stylesheet" }<
+		%script{:src => "js/jquery-3.2.1.min.js"}
+		%script{:src => "js/mainJS.js"}
+
+	%body
+		%header<
+			%div.wrapper
+			%div#titlelogo<
+				%a{:href => "index.html"}<
+					%h1#mainheading<
+						Dennis Wong
+			%nav<
+				%button.menu<>
+					MENU
+				%ul.nav-list<>
+					%li.nav-item<>
+						%a.main-nav.portfolio-On{:href => "index.html"}<>
+							Portfolio
+					%li.nav-item<>
+						%a.main-nav{:href => "dennis_resume.pdf", :target => "_blank"}<>
+							Resume
+					%li.nav-item<>
+						%a.main-nav{:href => "about.html"}<>
+							About and Contact
+
+		%section.mainbody
+			%div.project-link-wrap<
+				%a.project-img-link{:href => "seasidehome.html"}<
+					%img.project-img{:src => "img/personalmodel/FinalRenderClose2_front.jpg", :alt => "Personal Modeling project of seaside home"}
+					%div.project-img-words<>
+						%h2.project-img-Header<>
+							Seaside Home
+						%h3.project-img-second<>
+							\- view -
+			%div.project-link-wrap<
+				%a.project-img-link{:href => "vidgamerender.html"}<
+					%img.project-img{:src => "img/vidgamemodel/Overview_Cropped_front.jpg", :alt => "Video game 3D models"}
+					%div.project-img-words<>
+						%h2.project-img-Header<>
+							Unity Immersive World
+						%h3.project-img-second<>
+							\- view -
+			%div.project-link-wrap<
+				%a.project-img-link{:href => "productrender.html"}<
+					%img.project-img{:src => "img/productmodel/CompilationProducts_front.jpg", :alt => "Product renderings"}
+					%div.project-img-words<>
+						%h2.project-img-Header<>
+							Speaker and Lamp Products
+						%h3.project-img-second<>
+							\- view -
+			%div.project-link-wrap<
+				%a.project-img-link{:href => ""}<
+					%img.project-img{:src => "img/storageicon.jpg", :alt => "coming soon Picture"}
+					%div.project-img-words<>
+						%h2.project-img-Header<>
+							Model Bank
+						%h3.project-img-second<>
+							\- Coming Soon -
+		%footer<
+			%div.footer-left<>
+				%p<>
+					www.dennisptwong.ca
+			%div.footer-right<>
+				%a.social-links{:href => "https://www.linkedin.com/in/dennisptwong/"}<>
+					%img.social-links{:src => "img/linkedin-512.png"}<>
+			%div.wrapper
