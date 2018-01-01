@@ -2,9 +2,10 @@ $(document).ready(function(){
 
 	var windowResize = false;
 
-	if(window.matchMedia('(max-width: 35.876em)').matches){
+	if(window.matchMedia('(max-width: 40em)').matches){
 
 		$("ul.nav-list").css("display", "none");
+
 
 	}
 
@@ -20,9 +21,11 @@ $(document).ready(function(){
 
 	$(window).resize(function(){
 
-		if(window.matchMedia('(min-width: 35.876em)').matches){
+
+		if(window.matchMedia('(min-width: 40em)').matches){
 
 			$("ul.nav-list").css("display", "block");
+
 
 			
 			if(windowResize == false && windowResize != true){
@@ -30,7 +33,6 @@ $(document).ready(function(){
 				windowResize = true;
 
 			}
-
 
 		}
 		else{
@@ -42,10 +44,10 @@ $(document).ready(function(){
 				windowResize = false;
 
 			}
+
 		}
 
 	});
-
 
 	// function useMenu(){
 

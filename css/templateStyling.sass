@@ -3,11 +3,13 @@
 /*!dark blue: #005c99 */
 /*!darker blue: #1f4060 */
 /*!even darker blue #00334d */
+/*!maindarkblue #28435b*/
 /*!font white: #a6a6a6 */
 /*!heading white: #b3b3b3*/
 /*!background: #1a1a1a */
+/*!svgColourChange: #1f4582*/
 
-$mainBlue: #00334d
+$mainBlue: #28435b
 
 $secondaryBlue: #4db8ff
 
@@ -18,6 +20,12 @@ $fontwhite: #a6a6a6
 $menuBlue: #1f4060 
 
 $headingwhite: #b3b3b3
+
+$extrablue: #5cc3db
+
+$svgColourChange: #1f4582
+
+$frontpagebutton: #1a4182
 
 *
 	-webkit-box-sizing: border-box
@@ -44,7 +52,7 @@ $headingwhite: #b3b3b3
 body 
 	display: block
 	font-family: arimo, verdana, times
-	background-color: $backgroundBlack
+	background-color: $mainBlue
 	margin: auto
 
 a
@@ -63,6 +71,26 @@ a
 
 	&#project-next
 		display: inline-block
+
+	&.frontpage-link
+		color: white
+		float: right
+		padding: 1em 2em
+		margin: 1em
+		margin-right: 5em
+		border-radius: 1.5em
+		background: $frontpagebutton
+
+		&:hover, &:focus, &:active
+			color: $fontwhite
+			transition: color 0.5s ease-out
+
+		@media(max-width: 46.25em)
+			text-align: center
+			margin: 0.2em auto
+			margin-top: 0
+			float: none
+			display: inline-block
 
 	&.portfolio-On
 		color: $secondaryBlue
@@ -84,6 +112,21 @@ a
 			-webkit-transition: color 0.5s ease-out
 			transition: color 0.5s ease-out
 
+	&.social-links
+
+		&:hover, &:focus, &:active
+			color:$secondaryBlue
+			-webkit-transition: color 0.5s ease-out
+			transition: color 0.5s ease-out
+
+		&#about
+			margin: 5em 5em
+
+			@media(max-width:67.5em)
+				display: block
+				position: static
+				margin: 3em 2em
+
 button
 	&.menu
 		visibility: hidden
@@ -99,7 +142,7 @@ button
 		background-color: $menuBlue
 		outline: none
 
-		@media(max-width: 35.875em)
+		@media(max-width: 40em)
 			position: static
 			display: block
 			visibility: visible
@@ -108,6 +151,10 @@ button
 
 div
 	&.about-wrapper
+		margin-top: 8em 
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 5em
 		width: 70%
 
 		@media(max-width: 58.125em)
@@ -119,7 +166,7 @@ div
 		display: -webkit-flex
 		display: flex
 		flex-direction: row
-		justify-content: center
+		justify-content: space-between
 		align-items: center 
 		flex-basis: 100%
 		margin-left: 5em
@@ -138,7 +185,7 @@ div
 		padding-bottom: 1.5em
 		padding-left: 1.5em
 		padding-right: 3em
-		width: 20em
+		width: 22em
 
 		&.clearfix:after
 			content: ""
@@ -153,7 +200,7 @@ div
 
 	&.col-2-of-3
 		display: block
-		margin: 0 10em 8em 18em
+		margin: 10em 10em 8em 21em
 
 		&.clearfix:after
 			content: ""
@@ -190,13 +237,15 @@ div
 			position: static
 			width: 100%
 			text-align: center
-			margin: 1.5em auto 3em auto
+			margin: 1.5em auto 5em auto
 
 
 	&.footer-left
 		display: inline-block
 		margin-left: 2em
 		margin-right: auto
+		margin-bottom: 1em
+		margin-top: 1em
 
 
 	&.footer-right
@@ -207,20 +256,126 @@ div
 		margin-right: 2em
 		margin-left: auto
 
+	&.frontpage-desc
+		display: block
+		position: absolute
+		margin: 0 5em
+		padding-top: 12em
+		max-width: 50em
+		z-index: 1
 
-	&#titlelogo
-		display: inline-block
-		margin-left: 2em
-		margin-top: 0.2em
-		margin-bottom: 0.2em
+		@media(max-width: 46.25em)
+			padding-top: 0
+			position: static
+			margin-top: 5em
+			margin-bottom: 10em
+
+		@media(max-width: 67.5em)
+			max-width: 30em
+
+		@media(min-width: 118.75em)
+			margin-left: 14em
+
+	&.frontpage-content-desc-L
+		padding-top: 18em
+		margin-left: 5em
+		margin-right: 2em
+		padding-right: 7em
+		max-width: 40%
 
 		@media(max-width: 46.25em)
 			display: block
 			position:static
 			text-align: center
 			margin: 0.2em auto
+			margin-top: 0
+			margin-bottom: 5em
+			padding: 0
+			float: none
+			max-width: 90%
+
+		@media(max-width: 80em)
+			padding-top: 8em
+
+		@media(min-width: 118.75em)
+			margin-left: 14em
+
+	&.frontpage-content-desc-R
+		background: linear-gradient(215deg, transparent 3em, $extrablue 3.2em)
+		max-width: 40%
+		margin-top: 10em
+		margin-right: 6em
+		margin-bottom: auto
+		padding-bottom: 5em
+
+		&#blase
+			margin-bottom: auto
+			margin-top: 10em
+			padding-bottom: 3em
+
+			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+				margin-bottom: 1em
+
+			@media(max-width: 67.5em)
+				width: 70%
+				padding-bottom: 1em
+
+			@media(max-width: 46.25em)
+				display: block
+				position:static
+				text-align: center
+				margin: 0.2em auto
+				margin-top: 0
+				margin-bottom: 2em
+				float: none
+				max-width: 90%
+
+		@media(max-width: 46.25em)
+			display: block
+			position:static
+			text-align: center
+			margin: 0.2em auto
+			margin-top: 0
+			margin-bottom: 5em
+			float: none
+			max-width: 90%
+
+
+
+	&#titlelogo
+		display: inline-block
+		margin-left: 2em
+		margin-top: 0.4em
+		margin-bottom: 0.2em
+
+		@media(max-width: 46.25em)
+			display: block
+			position:static
+			text-align: center
+			margin: 0 auto 0.2em
 			max-width: 100%
 			flex-basis: 100%
+
+	&.head-svg-wrapper
+		display: inline-block
+		position: absolute
+		top: 0
+		right: 4em
+		height: 100%
+		overflow: hidden
+		z-index: 0
+
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+			left: 55%
+			right: 0
+
+
+
+	&.main-body-middle
+		background-color: yellow
+		width: 100vw
+		height: 100vh
+		margin: 0 auto
 
 	&.main-wrap
 		display:block
@@ -235,6 +390,12 @@ div
 		justify-content: center
 		align-items: center 
 		flex-basis: 100%
+
+	&.model-description
+		&.inner
+			display: block
+			max-width: 100%
+			margin: 2em auto 8em
 
 
 	&.project-wrapper
@@ -317,7 +478,6 @@ footer
 	position: fixed
 	bottom: 0
 	left: 0
-	background: $mainBlue
 	width: 100%
 	z-index: 1
 
@@ -328,7 +488,7 @@ footer
 		padding:0
 
 h1
-	color: $fontwhite
+	color: white
 
 	&#about-me
 		text-align: center
@@ -337,13 +497,33 @@ h1
 		color: $headingwhite
 		letter-spacing: 0.2em
 		text-transform: uppercase
-		font-size: 1.8em
+		font-size: 1.2em
 		margin: 0.8em auto 0.6em
+
+		@media(max-width: 46.25em)
+			margin: 0
+			padding-top: 0.8em
+			padding-bottom: 0.8em
 
 		@media(max-width: 35.875em)
 			margin:0
 			padding-top: 0.8em
 			padding-bottom: 0.6em
+
+	&.frontpagetitle
+		font-size: 4em
+		color: white
+
+		&#fronttitle
+			margin: 2.5em auto 0.5em 0
+
+			@media(max-width: 46.25em)
+				margin: 0
+				padding-top: 0.8em
+				padding-bottom: 0.8em
+
+
+
 
 h2
 	&.project-img-Header
@@ -351,6 +531,46 @@ h2
 
 		@media(max-width: 50.6875em)
 			text-align: center
+
+	&.frontpagedesc
+		margin-top: 0
+		margin-bottom: 1em
+		padding-left: 0.3em
+		color: $headingwhite
+		font-size: 1.2em
+		word-spacing: 1.1em
+
+	&.frontpagedesc-item
+		margin-top: 0
+		margin-bottom: 1em
+		padding-left: 0.3em
+		color: $headingwhite
+		font-size: 1.2em
+
+	&.frontpage-item-title
+		font-size: 2em
+		color: $fontwhite
+
+	&.model-desc
+		color: white
+
+		&.inner
+			font-size: 2em
+			margin: 1em 5em 1em 5em
+
+			@media(max-width: 67.5em)
+				font-size: 1.5em
+				margin: 1em 2em 1em 2em
+
+	&.role
+		margin-left: 4em
+
+		@media(max-width: 67.5em)
+			text-align:center
+			margin-left: auto
+			margin-right: auto
+
+
 
 h3
 	&.project-img-second
@@ -360,14 +580,15 @@ header
 	position: fixed
 	top:0
 	left: 0
-	background: hsla(200, 100%, 15%, 0.96)
 	width: 100%
 	z-index: 1
+	background-color: rgba(0,0,0,0.3)
 
-	@media(max-width: 35.875em)
+	@media(max-width: 40em)
 		position: static
 		display:block
 		margin: 0
+		background-color: $mainBlue
 
 hr
 	margin: 2em 0
@@ -380,7 +601,7 @@ img
 	&.model-image
 		display: block
 		max-width: 100%
-		margin: 2em auto
+		margin: 4em auto 8em
 
 	&.project-img
 		max-width: 100%
@@ -389,6 +610,22 @@ img
 
 	&.social-links
 		max-width: 1.5em
+
+	&.frontpage
+		display: block
+		width: 90%
+		margin: auto
+		padding-top: 7em
+		padding-bottom: 2em
+
+		&#blase
+			padding-top: 2em
+			padding-bottom: 0
+
+			@media(max-height: 45em)
+				width: 100%
+
+
 
 
 li
@@ -416,11 +653,11 @@ nav
 		max-width: 100%
 		float: none
 
-	@media(max-width: 35.875em)
+	@media(max-width: 40em)
 		margin: 0
 
 p
-	color: $fontwhite
+	color: white
 
 	&.model-description
 		display: block
@@ -428,14 +665,64 @@ p
 		margin: 2em 0
 		max-width: 100%
 
-	&#about-me-description
-		margin-left: 1.5em
+		&.inner
+			margin: 0 8em 4em 8em
+
+			@media(max-width: 67.5em)
+				margin: 0 3em 4em 3em
+
+		&.L
+			display: inline-block
+			vertical-align: top
+			margin: 0 3em 0 8em
+			max-width: 35%
+
+			@media(max-width: 80em)
+				max-width:30%
+
+			@media(max-width: 67.5em)
+				display: block
+				text-align:center
+				max-width: 90%
+				margin: 3em auto
+
+		&.R
+			display: inline-block
+			vertical-align: top
+			margin: 0 3em 0 3em
+			max-width: 35%
+
+			@media(max-width: 88.75em)
+				max-width:30%
+
+			@media(max-width: 67.5em)
+				display: block
+				text-align:center
+				max-width: 90%
+				margin: 3em auto
+
+	&.role
+		margin-left: 8em
+
+	&.about-me-description
+		margin-left: 2em
 		line-height: 1.7em
+
+		@media(max-width: 67.5em)
+			margin: 3em 2em
+
+	&.skills-description
+		line-height: 150%
+
+	&.warning
+		color: $fontwhite
+		opacity: 0.4
+
 
 section
 	&.mainbody
 		display:block
-		margin: 5em auto 3.6em
+		margin: 0 auto 
 		z-index: 0
 		overflow: hidden
 		max-width: 100%
@@ -455,19 +742,99 @@ section
 			max-width: 80%
 
 		@media(max-width: 46.25em)
-			margin-top: 7.9em
+			display: block
+			position:static
+			text-align: center
+			margin: 0.2em auto
+			max-width: 100%
+			margin-top: 0
+			float: none
+
 
 		@media(max-width: 35.875em)
 			margin-top: 0
 			margin-bottom: 0
 
+	&.main-body-head
+		position: relative
+		top: 0
+		left: 0
+		background-color: #28435b
+		width: 100vw
+		height: 100vh
+		margin: 0 auto
+
+		@media(max-width: 46.25em)
+			display: block
+			position:static
+			text-align: center
+			margin: 0.2em auto
+			margin-top: 0
+			max-width: 100%
+			height: auto
+			float: none
+
+	&.main-body-content
+		display: -ms-flexbox
+		display: -webkit-flex
+		display: flex
+		justify-content: space-between
+		width: 100vw
+		height: 100vh
+		background-color: #28435b
+
+		@media(max-width: 46.25em)
+			display: block
+			position:static
+			text-align: center
+			margin: 0.2em auto
+			margin-top: 0
+			max-width: 100%
+			height: auto
+			float: none
+
+svg
+	&.frontpage
+		display: inline-block
+		position absolute
+		top: 0
+		right: 0
+		height: 100%
+		fill: $extrablue
+		line
+			fill: none
+			stroke: $extrablue
+		rect
+			&#persona
+				fill: none
+				stroke: $extrablue
+
+		@media(max-width: 60em)
+			display: none
+			text-align: center
+			margin: 0.2em auto
+			margin-top: 0
+			max-width: 100%
+			height: auto
+			float: none
+
+/*		@media(max-width: 60em) */
+/*			fill: $svgColourChange*/
+
+
+
+
+/*use the absolute(relative to first non static predecessor element) in relative(relative to it's normal position making it non static) */
+
+
 
 ul
 	&.nav-list
 		padding: 0
-		margin: 2em 0.8em 0.6em
+		margin: 1em 1em 1.2em
 
 		@media(max-width: 35.875em)
 			display: block
 			margin: 0
-			padding: 0.8em 0.8em 0.6em
+			padding: 1em 0.8em 2em
+			background-color: $mainBlue
