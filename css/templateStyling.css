@@ -298,6 +298,8 @@ div.frontpage-desc {
     position: static;
     margin-top: 5em;
     margin-bottom: 10em;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
