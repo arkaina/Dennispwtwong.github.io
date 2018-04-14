@@ -45,6 +45,24 @@ a {
         display: inline-block; } }
   a#project-next {
     display: inline-block; }
+  a#project-inner-link {
+    display: inline-block;
+    float: none;
+    color: white;
+    text-align: center;
+    padding: 1em 2em;
+    margin: 1em 40%;
+    margin-bottom: 5em;
+    border-radius: 1.5em;
+    background: #1a4182; }
+    a#project-inner-link:hover, a#project-inner-link:focus, a#project-inner-link:active {
+      color: #a6a6a6;
+      transition: color 0.5s ease-out; }
+    @media (max-width: 46.25em) {
+      a#project-inner-link {
+        margin: 0.2em auto;
+        margin-top: 0;
+        float: none; } }
   a.frontpage-link {
     color: white;
     float: right;
