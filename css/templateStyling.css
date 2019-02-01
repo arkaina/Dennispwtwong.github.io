@@ -29,6 +29,7 @@
 body {
   display: block;
   font-family: arimo, verdana, times;
+  letter-spacing: 0.05em;
   background-color: #28435b;
   margin: auto;
   background-image: url(cssimg/BackgroundSVG1024_full.svg);
@@ -961,6 +962,7 @@ p {
       @media (max-width: 74.625em) {
         p.model-description.L {
           display: block;
+          text-align: left;
           max-width: 90%;
           margin: 3em auto; } }
     p.model-description.R {
@@ -974,6 +976,7 @@ p {
       @media (max-width: 74.625em) {
         p.model-description.R {
           display: block;
+          text-align: left;
           max-width: 90%;
           margin: 3em auto; } }
   p.role {

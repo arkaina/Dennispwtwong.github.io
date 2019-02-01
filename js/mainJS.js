@@ -3,6 +3,9 @@ $(document).ready(function(){
 	var windowResize = false;
 	var secondaryBlue = "#4db8ff";
 	var buttonBlue = "#1a4182";
+
+/*
+
 //check if element is on screen function
 	$.fn.isInViewport = function(){
 		var elementTop = $(this).offset().top;
@@ -48,7 +51,7 @@ $(document).ready(function(){
 /*
 check viewport function requires jquery to look at hover
 otherwise clean css hover will not activate
-*/
+
 //on hover changes button color
 	$("a.intro").hover(function(){
 		$(this).css('background', secondaryBlue);
@@ -103,6 +106,9 @@ otherwise clean css hover will not activate
 
 		return false;
 	});
+
+*/
+
 //to top scrolling animation
 	$("a#toTop").click(function(){
 		$("html, body").animate({scrollTop:0}, "2500", "swing");
