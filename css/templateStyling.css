@@ -131,6 +131,23 @@ a {
     a.takeaway:hover {
       background: #4db8ff;
       transition: background 0.5s ease-out; }
+  a#project-mid-link {
+    display: inline-block;
+    float: none;
+    color: white;
+    text-align: center;
+    padding: 1em 2em;
+    margin: 0.2em 40%;
+    border-radius: 1.5em;
+    background: #1a4182; }
+    a#project-mid-link:hover, a#project-mid-link:focus, a#project-mid-link:active {
+      color: #a6a6a6;
+      transition: color 0.5s ease-out; }
+    @media (max-width: 46.25em) {
+      a#project-mid-link {
+        margin: 0.2em auto;
+        margin-top: 0;
+        float: none; } }
   a.frontpage-link {
     position: relative; }
     a.frontpage-link:hover img, a.frontpage-link :active img, a.frontpage-link :focus img {
@@ -684,6 +701,10 @@ div.about-skills {
     div.about-skills {
       margin: 0 auto;
       text-align: center; } }
+
+div#project-div-link {
+  margin-bottom: 0.2em;
+  margin-top: 0.2em; }
 
 footer {
   position: fixed;

@@ -1,2 +1,2 @@
 # Dennispwtwong.github.io
-User Experience Design Portfolio
+3D artist portfolio website
