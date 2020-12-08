@@ -1,2 +1,2 @@
 # Dennispwtwong.github.io
-3D artist portfolio website
+Community Planning & User Experience Portfolio
